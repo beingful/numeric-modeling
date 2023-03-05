@@ -5,7 +5,7 @@
     <ProjectGuid>491a1d94-f977-46e6-b5cf-0aefb4b67f3a</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>difference_scheme.py</StartupFile>
+    <StartupFile>program.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,7 +25,7 @@
     <Compile Include="absolute_error.py" />
     <Compile Include="alternating_direction_implicit_method.py" />
     <Compile Include="conditions.py" />
-    <Compile Include="difference_scheme.py" />
+    <Compile Include="program.py" />
     <Compile Include="explicit_difference_scheme.py" />
     <Compile Include="function.py" />
     <Compile Include="partial_derivative.py" />
