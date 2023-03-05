@@ -25,6 +25,8 @@
     <Compile Include="absolute_error.py" />
     <Compile Include="alternating_direction_implicit_method.py" />
     <Compile Include="conditions.py" />
+    <Compile Include="heat_conduction_plot.py" />
+    <Compile Include="parameters.py" />
     <Compile Include="program.py" />
     <Compile Include="explicit_difference_scheme.py" />
     <Compile Include="function.py" />

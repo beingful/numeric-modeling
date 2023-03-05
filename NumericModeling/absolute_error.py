@@ -1,15 +1,16 @@
 from matplotlib.pyplot import xlabel, ylabel, title, plot, show
 from numpy import zeros
+from parameters import *
 
 class AbsoluteError:
-    __N, __M = 5, 20
+    __parameters = Parameters()
+    __steps = zeros((__parameters.M + 1) * (__parameters.N + 1) ** 2)
+    __method_abs_error = zeros((__parameters.M + 1) * (__parameters.N + 1) ** 2)
 
     def __init__(self, true_function_results, method_results, method_name):
         self.__method_results = method_results
         self.__true_function_results = true_function_results
         self.__method_name = method_name
-        self.__steps = zeros((self.__M + 1) * (self.__N + 1) ** 2)
-        self.__method_abs_error = zeros((self.__M + 1) * (self.__N + 1) ** 2)
 
     def build_plot(self):
         self.__calculate_abs_errors()
@@ -18,9 +19,9 @@ class AbsoluteError:
     def __calculate_abs_errors(self):
         counter = 0
 
-        for i in range(0, self.__M + 1, 1):
-            for j in range(0, self.__N + 1, 1):
-                for k in range(0, self.__N + 1, 1):
+        for i in range(0, self.__parameters.M + 1, 1):
+            for j in range(0, self.__parameters.N + 1, 1):
+                for k in range(0, self.__parameters.N + 1, 1):
                     self.__method_abs_error[counter] = \
                         abs(self.__true_function_results[i][j][k] - self.__method_results[i][j][k])
                     self.__steps[counter] = counter

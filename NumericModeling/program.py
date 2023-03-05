@@ -3,6 +3,7 @@ from alternating_direction_implicit_method import *
 from concurrent.futures import ThreadPoolExecutor
 from explicit_difference_scheme import *
 from function import *
+from heat_conduction_plot import *
 from two_step_symmetric_algorithm import *
 
 function_w = FunctionW()
@@ -27,3 +28,6 @@ for result in methods_results:
 
     abs_error = AbsoluteError(true_function_results, method_results, method_name)
     abs_error.build_plot()
+
+    heat_conduction_plot = HeatConductionPlot(method_results, method_name)
+    heat_conduction_plot.build_plot()
