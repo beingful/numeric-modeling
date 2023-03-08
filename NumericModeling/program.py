@@ -22,6 +22,9 @@ with ThreadPoolExecutor() as methods_executor:
 
 true_function_results = true_function_future.result()
 
+heat_conduction_plot = HeatConductionPlot(true_function_results, 'True function results')
+heat_conduction_plot.build_plot()
+
 for result in methods_results:
     method_name = result['method_name']
     method_results = result['method_results']

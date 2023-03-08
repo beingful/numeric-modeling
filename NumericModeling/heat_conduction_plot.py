@@ -28,8 +28,9 @@ class HeatConductionPlot:
                     self.__parameters.x0 + j * self.__parameters.hx
                 for k in range(0, self.__parameters.N + 1, 1):
                     self.__y_vector[counter] = \
-                        self.__parameters.y0 + j * self.__parameters.hy
+                        self.__parameters.y0 + k * self.__parameters.hy
                     self.__w_vector[counter] = self.__method_results[i][j][k]
+
                     counter += 1
 
     def __set_plot(self):
